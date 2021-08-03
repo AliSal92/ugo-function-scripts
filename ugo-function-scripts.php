@@ -34,4 +34,6 @@ function term_link_filter( $url, $term, $taxonomy ) {
 }
 
 // Add Product Description To the End of the Category Page
-add_action('woocommerce_after_shop_loop', 'woocommerce_product_archive_description', 10);
+add_action('woocommerce_after_shop_loop', function(){
+    echo 'test';
+});
