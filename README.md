@@ -1,1 +1,1 @@
-# ugo-function-scripts
+# UGO Function Scripts
