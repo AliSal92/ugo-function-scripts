@@ -32,8 +32,3 @@ function term_link_filter( $url, $term, $taxonomy ) {
     $url=str_replace("/./","/",$url);
      return $url;
 }
-
-// Add Product Description To the End of the Category Page
-add_action('woocommerce_after_shop_loop', function(){
-    echo 'test';
-});
