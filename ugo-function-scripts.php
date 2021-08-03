@@ -7,6 +7,7 @@ Version: 0.1
 License: GPLv2 or later
 */
 
+// Remove Product Category Slug
 add_filter('request', function( $vars ) {
 	global $wpdb;
 	if( ! empty( $vars['pagename'] ) || ! empty( $vars['category_name'] ) || ! empty( $vars['name'] ) || ! empty( $vars['attachment'] ) ) {
@@ -31,3 +32,6 @@ function term_link_filter( $url, $term, $taxonomy ) {
     $url=str_replace("/./","/",$url);
      return $url;
 }
+
+// Add Product Description To the End of the Category Page
+add_action('woocommerce_after_shop_loop', 'woocommerce_product_archive_description', 10);
